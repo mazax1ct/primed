@@ -1,0 +1,22 @@
+.socials
+  display: flex
+  flex-wrap: wrap
+
+.social-link
+  align-items: center
+  border-radius: 50%
+  border: 1px solid rgba($secondary-color, 0.3)
+  display: flex
+  justify-content: center
+  transition: background-color 0.3s, border-color 0.3s
+
+  &:hover
+    background-color: $secondary-color
+    border-color: $secondary-color
+
+    svg
+      fill: #fff
+
+  svg
+    fill: $secondary-color
+    transition: fill 0.3s

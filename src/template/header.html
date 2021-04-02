@@ -1,0 +1,45 @@
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <a class="header__logo" href="/">
+        <picture class="header__logo-picture">
+          <source srcset="images/logo_big.svg" media="(min-width: 768px)">
+          <img class="header__logo-image" src="images/logo_small.svg" alt="Стоматологический центр города Primed">
+        </picture>
+      </a>
+      <div class="header__top-right">
+        <a class="header__top-phone" href="tel:+78127750414">
+          <span class="header__top-phone-icon"><svg><use xlink:href="#phone"></use></svg></span>
+          <span class="header__top-phone-text">8 (812) 775-04-14</span>
+        </a>
+        <p class="header__work-time">Пн-Вс,<br> 09:00-21:00</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <button class="menu-toggler" type="button"><svg><use xlink:href="#menu"></use></svg> Меню</button>
+      <ul class="header-menu">
+        <li class="header-menu__item"><a class="header-menu__link" href="#">Акции</a></li>
+        <li class="header-menu__item"><a class="header-menu__link" href="#">О центре</a></li>
+        <li class="header-menu__item"><a class="header-menu__link" href="#">Врачи</a></li>
+        <li class="header-menu__item"><a class="header-menu__link" href="#">Медиа</a></li>
+      </ul>
+      <button class="header__clinics" type="button">
+        <span class="header__clinics-icon"><svg><use xlink:href="#pin"></use></svg></span>
+        <span class="header__clinics-text">8 Клиник в СПБ</span>
+      </button>
+      <div class="header__bottom-right">
+        <button class="header__button" type="button" data-fancybox data-src="#appointment">Записаться на прием</button>
+        <div class="search-bar">
+          <form class="search-bar__form" action="">
+            <input class="search-bar__input" type="text" value="" placeholder="Поиск">
+            <button class="search-bar__submit" type="submit">Искать</button>
+          </form>
+          <button class="js-search-toggler search-bar__toggler" type="button" title="Поиск"><svg><use xlink:href="#search"></use></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

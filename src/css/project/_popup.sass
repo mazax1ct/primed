@@ -1,0 +1,35 @@
+.popup
+  background-color: $secondary-color
+  color: #fff
+  font-size: 12px
+  display: none
+  max-width: 335px
+  width: 100%
+
+  @media(min-width: 768px)
+    font-size: 14px
+    max-width: 690px
+
+  @media(min-width: 1350px)
+    font-size: 16px
+    max-width: 850px
+
+  &.fancybox-content
+    padding: 40px 20px 60px
+
+    @media(min-width: 768px)
+      padding: 60px 24px
+
+    @media(min-width: 1350px)
+      padding-left: 100px
+      padding-right: 100px
+
+  &__title
+    font-size: 32px
+    font-weight: 500
+    line-height: 1.2
+    margin-bottom: 40px
+
+    @media(min-width: 768px)
+      font-size: 38px
+      margin-bottom: 60px

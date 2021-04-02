@@ -1,0 +1,426 @@
+.header
+  background-color: #fff
+  min-height: 125px
+  position: relative
+  z-index: 10
+
+  @media(min-width: 768px)
+    min-height: 165px
+
+  @media(min-width: 1350px)
+    min-height: 180px
+
+  &__top
+    border-bottom: 1px solid rgba($text-color, 0.1)
+    padding-top: 10px
+    padding-bottom: 10px
+
+    @media(min-width: 768px)
+      padding-top: 25px
+      padding-bottom: 25px
+
+    .container
+      align-items: center
+      display: flex
+      justify-content: space-between
+
+  &__logo
+    width: 31px
+
+    @media(min-width: 768px)
+      width: 172px
+
+    @media(min-width: 1350px)
+      width: 230px
+
+  &__top-right
+    align-items: center
+    display: flex
+    margin-left: auto
+
+  &__top-phone
+    display: block
+    font-size: 20px
+    font-weight: 500
+    line-height: 23px
+    text-decoration: none
+
+    @media(min-width: 1350px)
+      font-size: 25px
+      line-height: 29px
+
+  &__top-phone-icon
+    align-items: center
+    border-radius: 50%
+    border: 1px solid rgba($secondary-color, 0.3)
+    display: flex
+    height: 40px
+    justify-content: center
+    width: 40px
+
+    @media(min-width: 768px)
+      display: none
+
+    svg
+      fill: $secondary-color
+      height: 15px
+      width: 15px
+
+  &__top-phone-text
+    display: none
+
+    @media(min-width: 768px)
+      display: block
+
+  &__work-time
+    font-size: 8px
+    margin-left: 15px
+
+    @media(min-width: 768px)
+      margin-left: 20px
+
+    @media(min-width: 1350px)
+      font-size: 10px
+      margin-left: 35px
+
+  &__bottom
+    padding-top: 15px
+    padding-bottom: 15px
+
+    @media(min-width: 768px)
+      padding-top: 25px
+      padding-bottom: 25px
+
+    &.scrolled
+      box-shadow: 0 0 4px 0 rgba($text-color, 0.4)
+      background-color: #fff
+      left: 0
+      position: fixed
+      right: 0
+      top: 0
+      z-index: 1
+
+    .container
+      align-items: center
+      display: flex
+      justify-content: space-between
+
+      @media(min-width: 1024px)
+        justify-content: flex-start
+
+  &__bottom-right
+    display: flex
+
+    @media(min-width: 1024px)
+      margin-left: auto
+
+  &__button
+    background-color: #fff
+    border: 1px solid rgba($secondary-color, 0.3)
+    border-radius: 90px
+    color: $secondary-color
+    cursor: pointer
+    font-size: 10px
+    font-weight: 500
+    line-height: 12px
+    margin-right: 18px
+    padding: 11px 20px
+    text-decoration: none
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s
+
+    @media(min-width: 768px)
+      font-size: 14px
+      line-height: 16px
+      margin-right: 14px
+      padding: 12px 16px
+
+    @media(min-width: 1350px)
+      font-size: 16px
+      line-height: 19px
+      margin-right: 40px
+      padding: 12px 23px
+
+    &:hover
+      background-color: $secondary-color
+      border-color: $secondary-color
+      color: #fff
+
+  &__clinics
+    align-items: center
+    border: none
+    background-color: transparent
+    cursor: pointer
+    display: none
+    padding: 0
+    transition: color 0.3s
+
+    &:hover,
+    &.is-active
+      color: $secondary-color
+
+      .header__clinics-icon
+        background-color: $secondary-color
+        border-color: $secondary-color
+
+        svg
+          fill: #fff
+
+    @media(min-width: 768px)
+      display: flex
+
+  &__clinics-icon
+    align-items: center
+    border-radius: 50%
+    background-color: #fff
+    border: 1px solid rgba($secondary-color, 0.3)
+    font-size: 16px
+    display: flex
+    height: 40px
+    justify-content: center
+    line-height: 19px
+    transition: background-color 0.3s, border-color 0.3s
+    width: 40px
+
+    @media(min-width: 1350px)
+      height: 42px
+      margin-right: 15px
+      width: 42px
+
+    svg
+      fill: $secondary-color
+      height: 16px
+      transition: fill 0.3s
+      width: 16px
+
+  &__clinics-text
+    display: none
+
+    @media(min-width: 1350px)
+      display: block
+
+.menu-toggler
+  align-items: center
+  background-color: $secondary-color
+  border-radius: 90px
+  border: none
+  color: #fff
+  cursor: pointer
+  display: flex
+  font-size: 10px
+  font-weight: 400
+  justify-content: center
+  line-height: 12px
+  padding: 11px 16px
+  transition: background-color 0.3s, border-color 0.3s
+
+  @media(min-width: 768px)
+    font-size: 14px
+    line-height: 16px
+    padding: 12px 16px
+
+  @media(min-width: 1024px)
+    margin-right: 60px
+
+  @media(min-width: 1350px)
+    font-size: 16px
+    line-height: 19px
+    padding: 13px 23px
+
+  &:hover,
+  &.is-active
+    background-color: $primary-color
+    border-color: $primary-color
+
+  svg
+    fill: #fff
+    height: 14px
+    margin-right: 12px
+    width: 14px
+
+    @media(min-width: 1350px)
+      height: 17px
+      margin-right: 15px
+      width: 17px
+
+.search-bar
+  position: relative
+
+  &__toggler
+    align-items: center
+    background-color: #fff
+    border: 1px solid rgba($secondary-color, 0.3)
+    border-radius: 90px
+    color: $secondary-color
+    cursor: pointer
+    display: flex
+    font-size: 10px
+    font-weight: 500
+    height: 36px
+    justify-content: center
+    line-height: 12px
+    padding: 0
+    text-decoration: none
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s
+    width: 36px
+
+    @media(min-width: 768px)
+      height: 40px
+      width: 40px
+
+    @media(min-width: 1350px)
+      height: 42px
+      width: 42px
+
+    &.is-active,
+    &:hover
+      background-color: $secondary-color
+      border-color: $secondary-color
+
+      svg
+        fill: #fff
+
+    &.is-active
+      &:hover
+        background-color: $primary-color
+        border-color: $primary-color
+
+      svg
+        height: 14px
+        width: 14px
+
+    svg
+      fill: $secondary-color
+      height: 14px
+      transition: fill 0.3s
+      width: 14px
+
+      @media(min-width: 768px)
+        height: 15px
+        width: 15px
+
+      @media(min-width: 1350px)
+        height: 16px
+        width: 16px
+
+  &__form
+    display: none
+    left: auto
+    position: absolute
+    right: 54px
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 1
+
+    @media(min-width: 1350px)
+      right: 57px
+
+    &.is-active
+      display: block
+
+  &__input
+    background-color: #F5F9FF
+    border: none
+    border-radius: 90px
+    color: $text-color
+    font-size: 14px
+    font-weight: 300
+    line-height: 16px
+    min-height: 40px
+    padding: 10px 70px 10px 20px
+    width: 190px
+
+    @media(min-width: 768px)
+      padding-top: 13px
+      padding-bottom: 13px
+      width: 430px
+
+    @media(min-width: 1350px)
+      padding-top: 15px
+      padding-bottom: 15px
+
+    &::-webkit-input-placeholder
+      color: rgba($text-color, 0.4)
+      opacity: 1
+
+    &::-moz-placeholder
+      color: rgba($text-color, 0.4)
+      opacity: 1
+
+    &:-ms-input-placeholder
+      color: rgba($text-color, 0.4)
+      opacity: 1
+
+    &:focus
+      outline: none
+
+      &::-webkit-input-placeholder
+        color: rgba($text-color, 0.1)
+        opacity: 1
+
+      &::-moz-placeholder
+        color: rgba($text-color, 0.1)
+        opacity: 1
+
+      &:-ms-input-placeholder
+        color: rgba($text-color, 0.1)
+        opacity: 1
+
+  &__submit
+    background-color: $secondary-color
+    border-radius: 90px
+    border: none
+    color: #fff
+    cursor: pointer
+    font-size: 10px
+    font-weight: 500
+    line-height: 12px
+    left: auto
+    min-width: 64px
+    position: absolute
+    padding: 11px 16px
+    right: 3px
+    top: 50%
+    transform: translateY(-50%)
+    transition: background-color 0.3s, color 0.3s
+
+    @media(min-width: 1350px)
+      font-size: 14px
+      line-height: 16px
+      right: 5px
+      padding-left: 17px
+      padding-right: 17px
+
+    &:hover
+      background-color: $primary-color
+
+.header-menu
+  display: none
+  font-size: 14px
+  list-style: none
+  margin: 0
+  padding: 0
+
+  @media(min-width: 768px)
+    display: flex
+
+  @media(min-width: 1024px)
+    margin-right: 60px
+
+  @media(min-width: 1350px)
+    font-size: 16px
+    line-height: 19px
+
+  &__item
+    &:not(:last-child)
+      margin-right: 20px
+
+      @media(min-width: 1024px)
+        margin-right: 60px
+
+  &__link
+    color: $text-color
+    font-weight: 500
+    text-decoration: none
+
+    &:hover
+      color: $secondary-color

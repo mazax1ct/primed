@@ -1,0 +1,70 @@
+.button
+  align-items: center
+  background-color: $secondary-color
+  border: none
+  border-radius: 0
+  color: #fff
+  cursor: pointer
+  display: inline-flex
+  font-family: inherit
+  font-size: 14px
+  font-weight: 500
+  line-height: 16px
+  padding: 21px 20px
+  text-decoration: none
+  text-align: center
+  vertical-align: middle
+  transition: background-color 0.3s, color 0.3s
+
+  @media(min-width: 1350px)
+    font-size: 16px
+    line-height: 21px
+    padding-top: 25px
+    padding-bottom: 24px
+    padding-left: 27px
+    padding-right: 27px
+
+  &:hover,
+  &:active,
+  &:focus
+    background-color: $secondary-hover
+    color: #fff
+
+  //&:focus
+    outline: 1px dotted $text-color
+
+  .arrow
+    fill: #fff
+    height: 15px
+    min-width: 15px
+    margin-left: 15px
+    transition: fill 0.3s
+    width: 15px
+
+    @media(min-width: 1350px)
+      min-width: 20px
+      margin-left: 20px
+      width: 20px
+
+  &--white
+    background-color: #fff
+    color: $secondary-color
+
+    &:hover,
+    &:active
+      background-color: $secondary-hover
+      color: #fff
+
+      .arrow
+        fill: #fff
+
+    .arrow
+      fill: $secondary-color
+
+  &:disabled,
+  &.disabled
+    cursor: default
+    opacity: 0.5
+
+    &:focus
+      outline: none
