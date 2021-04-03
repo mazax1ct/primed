@@ -1,4 +1,4 @@
-<div id="appointment" class="popup">
+<div id="consult" class="popup">
   <p class="popup__title">Бесплатная консультация</p>
   <form class="form" action="">
     <div class="form__row">
@@ -34,13 +34,60 @@
       <div class="form__row-cell">
         <label class="label">
           <span class="label__text">Ваш телефон</span>
-          <input class="input input--white" type="text" name="user_phone" placeholder="Введите телефон">
+          <input class="js-phone-mask input input--white" type="text" name="user_phone" placeholder="Введите телефон">
         </label>
       </div>
       <div class="form__row-cell">
-        <button class="form__submit button button--white" type="submit">Узнать стоимость <svg class="arrow"><use xlink:href="#arrow_right"></use></svg></button>
+        <button class="form__submit button button--white" type="submit" data-fancybox="success" data-src="#success">Узнать стоимость <svg class="arrow"><use xlink:href="#arrow_right"></use></svg></button>
       </div>
     </div>
   </form>
   <p>Нажимая на кнопку “Рассчитать стоимость” вы соглашаетесь с политикой конфиденциальности данного сайта.</p>
+</div>
+
+<div id="appointment" class="popup">
+  <p class="popup__title">Записаться на прием</p>
+  <form class="form" action="">
+    <div class="form__row">
+      <div class="form__row-cell">
+        <label class="label">
+          <span class="label__text">Ваше имя</span>
+          <input class="input input--white" type="text" name="user_name" placeholder="Введите имя">
+        </label>
+      </div>
+      <div class="form__row-cell">
+        <label class="label">
+          <span class="label__text">Ваш телефон</span>
+          <input class="js-phone-mask input input--white" type="text" name="user_phone" placeholder="Введите телефон">
+        </label>
+      </div>
+    </div>
+    <div class="form__row">
+      <div class="form__row-cell">
+        <label class="label">
+          <span class="label__text">Дата приема (необязательно)</span>
+          <input class="input input--white" type="date" name="date" min="03-04-2021" max="10-04-2021" placeholder="Выберите дату">
+        </label>
+      </div>
+      <div class="form__row-cell">
+        <label class="label">
+          <span class="label__text">Время приема (необязательно)</span>
+          <input class="input input--white" type="time" name="time" placeholder="Введите время">
+        </label>
+      </div>
+    </div>
+    <div class="form__row">
+      <div class="form__row-cell">
+        <button class="form__submit button button--white" type="submit" data-fancybox="success2" data-src="#success">Записаться на прием <svg class="arrow"><use xlink:href="#arrow_right"></use></svg></button>
+      </div>
+      <div class="form__row-cell">
+        <p>Нажимая на кнопку “Записаться на прием” вы соглашаетесь с политикой конфиденциальности данного сайта.</p>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div id="success" class="popup popup--success">
+  <p class="popup__title">Спасибо<br> за вашу заявку!</p>
+  <p class="popup__text">Мы свяжемся с вами в ближайшее время для уточнения деталей.</p>
 </div>

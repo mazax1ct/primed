@@ -7,6 +7,7 @@
           <img class="header__logo-image" src="images/logo_small.svg" alt="Стоматологический центр города Primed">
         </picture>
       </a>
+
       <div class="header__top-right">
         <a class="header__top-phone" href="tel:+78127750414">
           <span class="header__top-phone-icon"><svg><use xlink:href="#phone"></use></svg></span>
@@ -14,22 +15,28 @@
         </a>
         <p class="header__work-time">Пн-Вс,<br> 09:00-21:00</p>
       </div>
-
     </div>
   </div>
-  <div class="header__bottom">
+  <div class="header__bottom compensate-for-scrollbar">
     <div class="container">
-      <button class="menu-toggler" type="button"><svg><use xlink:href="#menu"></use></svg> Меню</button>
+      <button class="js-menu-toggler menu-toggler" type="button"><svg><use xlink:href="#menu"></use></svg> Меню</button>
       <ul class="header-menu">
         <li class="header-menu__item"><a class="header-menu__link" href="#">Акции</a></li>
         <li class="header-menu__item"><a class="header-menu__link" href="#">О центре</a></li>
         <li class="header-menu__item"><a class="header-menu__link" href="#">Врачи</a></li>
         <li class="header-menu__item"><a class="header-menu__link" href="#">Медиа</a></li>
       </ul>
-      <button class="header__clinics" type="button">
+      <button class="js-clinics-toggler header__clinics" type="button">
         <span class="header__clinics-icon"><svg><use xlink:href="#pin"></use></svg></span>
         <span class="header__clinics-text">8 Клиник в СПБ</span>
       </button>
+      <div class="header__bot-phone-wt">
+        <a class="header__bot-phone" href="tel:+78127750414">
+          <span class="header__bot-phone-icon"><svg><use xlink:href="#phone_2"></use></svg></span>
+          <span class="header__bot-phone-text">8 (812) 775-04-14</span>
+        </a>
+        <p class="header__work-time">Пн-Вс,<br> 09:00-21:00</p>
+      </div>
       <div class="header__bottom-right">
         <button class="header__button" type="button" data-fancybox data-src="#appointment">Записаться на прием</button>
         <div class="search-bar">
@@ -38,6 +45,206 @@
             <button class="search-bar__submit" type="submit">Искать</button>
           </form>
           <button class="js-search-toggler search-bar__toggler" type="button" title="Поиск"><svg><use xlink:href="#search"></use></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="header__clinics-dropdown">
+      <div class="header__clinics-dropdown-inner">
+        <div class="container">
+          <div class="clinics-list">
+            <div class="clinic">
+              <div class="clinic__info">
+                <p class="clinic__title">Невский проспект, д.130</p>
+                <p class="clinic__metro"><span class="clinic__metro-icon red"><svg><use xlink:href="#metro"></use></svg></span> <span>Станция метро:<br> Площадь Восстания; Маяковская</span></p>
+              </div>
+              <a class="clinic__link" href="#"><span class="clinic__link-text">Узнать больше</span> <svg><use xlink:href="#arrow_right"></use></svg></a>
+            </div>
+            <div class="clinic">
+              <div class="clinic__info">
+                <p class="clinic__title">ул. Куйбышева, д.21</p>
+                <p class="clinic__metro"><span class="clinic__metro-icon blue"><svg><use xlink:href="#metro"></use></svg></span> <span>Станция метро:<br> Горьковская; Петроградская</span></p>
+              </div>
+              <a class="clinic__link" href="#"><span class="clinic__link-text">Узнать больше</span> <svg><use xlink:href="#arrow_right"></use></svg></a>
+            </div>
+            <div class="clinic">
+              <div class="clinic__info">
+                <p class="clinic__title">пр. Космонавтов, д. 61, корпус 2</p>
+                <p class="clinic__metro"><span class="clinic__metro-icon blue"><svg><use xlink:href="#metro"></use></svg></span> <span>Станция метро:<br> Звездная; Купчино</span></p>
+              </div>
+              <a class="clinic__link" href="#"><span class="clinic__link-text">Узнать больше</span> <svg><use xlink:href="#arrow_right"></use></svg></a>
+            </div>
+            <div class="clinic">
+              <div class="clinic__info">
+                <p class="clinic__title">ул. Оптиков д. 45, корпус 1</p>
+                <p class="clinic__metro"><span class="clinic__metro-icon purple"><svg><use xlink:href="#metro"></use></svg></span> <span>Станция метро:<br> Старая Деревня; Беговая</span></p>
+              </div>
+              <a class="clinic__link" href="#"><span class="clinic__link-text">Узнать больше</span> <svg><use xlink:href="#arrow_right"></use></svg></a>
+            </div>
+            <div class="clinic">
+              <div class="clinic__info">
+                <p class="clinic__title">Киевская 3</p>
+                <p class="clinic__metro"><span class="clinic__metro-icon blue"><svg><use xlink:href="#metro"></use></svg></span> <span>Станция метро:<br> Фрунзенская</span></p>
+              </div>
+              <a class="clinic__link" href="#"><span class="clinic__link-text">Узнать больше</span> <svg><use xlink:href="#arrow_right"></use></svg></a>
+            </div>
+            <div class="clinic">
+              <div class="clinic__info">
+                <p class="clinic__title">Ленинский 54</p>
+                <p class="clinic__metro"><span class="clinic__metro-icon red"><svg><use xlink:href="#metro"></use></svg></span> <span>Станция метро:<br> Ленинский проспект; Проспект Ветеранов</span></p>
+              </div>
+              <a class="clinic__link" href="#"><span class="clinic__link-text">Узнать больше</span> <svg><use xlink:href="#arrow_right"></use></svg></a>
+            </div>
+            <div class="clinic">
+              <div class="clinic__info">
+                <p class="clinic__title">Дальневосточный пр.12</p>
+                <p class="clinic__metro"><span class="clinic__metro-icon orange"><svg><use xlink:href="#metro"></use></svg></span> <span>Станция метро:<br> Новочеркасская; Проспект Большевиков</span></p>
+              </div>
+              <a class="clinic__link" href="#"><span class="clinic__link-text">Узнать больше</span> <svg><use xlink:href="#arrow_right"></use></svg></a>
+            </div>
+            <div class="clinic">
+              <div class="clinic__info">
+                <p class="clinic__title">Комендантский пр.58 к.1</p>
+                <p class="clinic__metro"><span class="clinic__metro-icon purple"><svg><use xlink:href="#metro"></use></svg></span> <span>Станция метро:<br> Комендантский проспект</span></p>
+              </div>
+              <a class="clinic__link" href="#"><span class="clinic__link-text">Узнать больше</span> <svg><use xlink:href="#arrow_right"></use></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__menu-dropdown">
+      <div class="header__menu-dropdown-inner">
+        <div class="container">
+          <div class="header__menu-top">
+            <nav class="main-nav">
+              <ul class="main-menu">
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Все услуги</a></li>
+                <li class="main-menu__item main-menu__item--root">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_1"></use></svg> Имплантация зубов <button class="main-menu__toggler" type="button"><svg><use xlink:href="#arrow_down"></use></svg></button></a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Имплантация одного зуба</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Имплантация верхних зубов</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Имплантация верхней челюсти</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Имплантация нижней челюсти</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Костная пластика</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item main-menu__item--root">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_2"></use></svg> Лечение десен <button class="main-menu__toggler" type="button"><svg><use xlink:href="#arrow_down"></use></svg></button></a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение гингивита</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение пародонтита</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение стоматита</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item main-menu__item--root">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_3"></use></svg> Лечение зубов <button class="main-menu__toggler" type="button"><svg><use xlink:href="#arrow_down"></use></svg></button></a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение кариеса зубов</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение кисты</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение под микроскопом</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение пульпита</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение периодонтита</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item main-menu__item--root">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_4"></use></svg> Исправление прикуса <button class="main-menu__toggler" type="button"><svg><use xlink:href="#arrow_down"></use></svg></button></a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Брекетами</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Элайнерами</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Элайнеры Invisalign</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Миофункциональная ортодонтия</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item main-menu__item--root">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_5"></use></svg> Протезирование зубов <button class="main-menu__toggler" type="button"><svg><use xlink:href="#arrow_down"></use></svg></button></a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Протезирование зубов коронками</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Частичное протезирование зубов</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Несъемное протезирование зубов</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Съёмное протезирование зубов</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Мостовидное протезирование зубов</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item main-menu__item--root">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_6"></use></svg> Удаление зубов <button class="main-menu__toggler" type="button"><svg><use xlink:href="#arrow_down"></use></svg></button></a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Удаление зубов мудрости</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Удаление ретинированного зуба</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Удаление опухоли зуба</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item main-menu__item--root">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_7"></use></svg> Эстетическая стоматология <button class="main-menu__toggler" type="button"><svg><use xlink:href="#arrow_down"></use></svg></button></a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Виниры</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Отбеливание зубов</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Чистка зубов</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Чистка зубов с брекетами</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item main-menu__item--root">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_8"></use></svg> Диагностика <button class="main-menu__toggler" type="button"><svg><use xlink:href="#arrow_down"></use></svg></button></a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Телерентгенограмма</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Ортопантомография</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Компьютерная томография</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Консультация специалистов</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item main-menu__item--root main-menu__item--bottom">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_9"></use></svg> Детская стоматология <button class="main-menu__toggler" type="button"><svg><use xlink:href="#arrow_down"></use></svg></button></a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение детей во сне</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Реставрация молочных зубов</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Травма зуба</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение молочных зубов</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение бутылочного кариеса</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item main-menu__item--root main-menu__item--bottom">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_10"></use></svg> ЛОР-отделение</a>
+                </li>
+                <li class="main-menu__item main-menu__item--root main-menu__item--bottom">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_11"></use></svg> Лечение зубов седация <button class="main-menu__toggler" type="button"><svg><use xlink:href="#arrow_down"></use></svg></button></a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение во сне</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Лечение под закисью азота</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item main-menu__item--root main-menu__item--bottom">
+                  <a class="main-menu__link" href="#"><svg><use xlink:href="#serv_12"></use></svg> Стоматологический туризм</a>
+                </li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Акции</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">О центре</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Врачи</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Медиа</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">8 Клиник в СПБ</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__menu-bottom">
+            <p class="header__menu-phone"><a href="tel:+78127750414">8 (812) 775-04-14</a></p>
+            <p class="header__menu-clinics-title"><a href="#"><span class="header__menu-clinics-icon"><svg><use xlink:href="#pin"></use></svg></span> 8 Клиник в Санкт-Петербурге:</a></p>
+            <ul class="header__menu-clinics-list">
+              <li><a href="#">Невский проспект, д.&nbsp;130</a></li>
+              <li><a href="#">ул. Куйбышева, д.&nbsp;21</a></li>
+              <li><a href="#">Киевская&nbsp;3</a></li>
+              <li><a href="#">Ленинский&nbsp;54</a></li>
+              <li><a href="#">пр. Космонавтов, д.&nbsp;61, к.&nbsp;2</a></li>
+              <li><a href="#">ул. Оптиков д.&nbsp;45, к.&nbsp;1</a></li>
+              <li><a href="#">Дальневосточный пр.&nbsp;12</a></li>
+              <li><a href="#">Комендантский пр.&nbsp;58 к.&nbsp;1</a></li>
+            </ul>
+            <button class="header__menu-button button" type="button" data-fancybox="consult_2" data-src="#consult">Бесплатная консультация <svg class="arrow"><use xlink:href="#arrow_right"></use></svg></button>
+            <div class="socials">
+              <a class="social-link" href="#" title="Наш канал на YouTube" rel="nofollow noreferrer"><svg><use xlink:href="#yt"></use></svg></a>
+              <a class="social-link" href="#" title="Наша страничка на Facebook" rel="nofollow noreferrer"><svg><use xlink:href="#fb"></use></svg></a>
+              <a class="social-link" href="#" title="Наш аккаунт в Instagram" rel="nofollow noreferrer"><svg><use xlink:href="#inst"></use></svg></a>
+              <a class="social-link" href="#" title="Наша страничка в Vk" rel="nofollow noreferrer"><svg><use xlink:href="#vk"></use></svg></a>
+              <a class="social-link" href="#" title="Наш аккаунт в Twitter" rel="nofollow noreferrer"><svg><use xlink:href="#tw"></use></svg></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
