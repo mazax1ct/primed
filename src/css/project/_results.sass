@@ -1,0 +1,75 @@
+.results
+  &__title
+    margin-bottom: 60px
+
+    @media(min-width: 768px)
+      margin-bottom: 80px
+
+    @media(min-width: 1350px)
+      font-size: 65px
+      line-height: 1.2
+      margin-bottom: 120px
+
+  &__features
+    display: flex
+    flex-wrap: wrap
+    margin-left: -10px
+    margin-right: -10px
+
+    @media(min-width: 1350px)
+      margin-left: -40px
+      margin-right: -40px
+
+  &__features-item
+    margin-bottom: 30px
+    padding-left: 10px
+    padding-right: 10px
+    width: 50%
+
+    @media(min-width: 1024px)
+      width: 25%
+
+    @media(min-width: 1350px)
+      padding-left: 40px
+      padding-right: 40px
+
+    &:nth-last-child(1),
+    &:nth-last-child(2)
+      margin-bottom: 0
+
+    &:nth-last-child(1),
+    &:nth-last-child(2),
+    &:nth-last-child(3),
+    &:nth-last-child(4)
+      @media(min-width: 1024px)
+        margin-bottom: 0
+
+.result-feature
+  font-size: 10px
+
+  @media(min-width: 768px)
+    font-size: 14px
+
+  @media(min-width: 1350px)
+    font-size: 16px
+
+  &__icon
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      margin-bottom: 25px
+
+    @media(min-width: 1350px)
+      margin-bottom: 30px
+
+  &__title
+    color: $text-color
+    font-weight: 700
+    margin-bottom: 10px
+
+    @media(min-width: 768px)
+      margin-bottom: 15px
+
+    @media(min-width: 1350px)
+      font-size: 20px
+      margin-bottom: 20px

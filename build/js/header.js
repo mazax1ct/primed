@@ -1,7 +1,6 @@
 var disableBodyScroll = bodyScrollLock.disableBodyScroll;
 var enableBodyScroll = bodyScrollLock.enableBodyScroll;
-var clinicsDropdown = document.querySelector('.header__clinics-dropdown');
-var menuDropdown = document.querySelector('.header__menu-dropdown');
+var headerDropdown = document.querySelector('.header__dropdown');
 
 //функция навешивания класса на шапку
 var resize_scroll = function(e) {
@@ -51,35 +50,48 @@ $(document).on('click', '.js-clinics-toggler', function () {
 
   if($(this).hasClass('is-active')) {
     scrollBarWidth();
-    //if($('body').width() < 1025) {
-      disableBodyScroll(clinicsDropdown);
-    //}
+
+    disableBodyScroll(headerDropdown);
+
+    $('.header__dropdown').addClass('is-open');
+
     $('.header__clinics-dropdown').addClass('is-open');
 
-    document.addEventListener('click', closeClinicsMenu);
+    document.addEventListener('click', headerDropdownClose);
   } else {
     $('#menu-open').remove();
     $('body').removeClass('compensate-for-scrollbar');
-    //if($('body').width() < 1025) {
-      enableBodyScroll(clinicsDropdown);
-    //}
+
+    enableBodyScroll(headerDropdown);
+
+    $('.header__dropdown').removeClass('is-open');
+
     $('.header__clinics-dropdown').removeClass('is-open');
 
-    document.removeEventListener('click', closeClinicsMenu);
+    document.removeEventListener('click', headerDropdownClose);
   }
 
   return false;
 });
 
-function closeClinicsMenu(evt) {
-  if (!$('.header__clinics-dropdown-inner').is(evt.target) && $('.header__clinics-dropdown-inner').has(evt.target).length === 0) {
+function headerDropdownClose(evt) {
+  if (!$('.header__dropdown-inner').is(evt.target) && $('.header__dropdown-inner').has(evt.target).length === 0) {
+    $('#menu-open').remove();
+    $('body').removeClass('compensate-for-scrollbar');
+
+    $('.header__dropdown').removeClass('is-open');
     $('.header__clinics-dropdown').removeClass('is-open');
+    $('.header__menu-dropdown').removeClass('is-open');
+
     $('.js-clinics-toggler').removeClass('is-active');
-    document.removeEventListener('click', closeClinicsMenu);
-    enableBodyScroll(clinicsDropdown);
-    /*$('#menu-open').remove();
-    $('body').removeClass('compensate-for-scrollbar');*/
+    $('.js-menu-toggler').removeClass('is-active');
+    $('.js-menu-toggler').find('svg use').attr('xlink:href', '#menu');
+
+    document.removeEventListener('click', headerDropdownClose);
+    enableBodyScroll(headerDropdown);
 	}
+
+  //console.log(evt.target);
 }
 
 //главное меню
@@ -89,38 +101,31 @@ $(document).on('click', '.js-menu-toggler', function () {
   if($(this).hasClass('is-active')) {
     scrollBarWidth();
     $(this).find('svg use').attr('xlink:href', '#close');
-    //if($('body').width() < 1025) {
-      disableBodyScroll(menuDropdown);
-    //}
+
+    disableBodyScroll(headerDropdown);
+
+    $('.header__dropdown').addClass('is-open');
+
     $('.header__menu-dropdown').addClass('is-open');
 
-    document.addEventListener('click', closeMainMenu);
+    document.addEventListener('click', headerDropdownClose);
   } else {
     $('#menu-open').remove();
     $('body').removeClass('compensate-for-scrollbar');
+
     $(this).find('svg use').attr('xlink:href', '#menu');
-    //if($('body').width() < 1025) {
-      enableBodyScroll(menuDropdown);
-    //}
+
+    enableBodyScroll(headerDropdown);
+
+    $('.header__dropdown').removeClass('is-open');
+
     $('.header__menu-dropdown').removeClass('is-open');
 
-    document.removeEventListener('click', closeMainMenu);
+    document.removeEventListener('click', headerDropdownClose);
   }
 
   return false;
 });
-
-function closeMainMenu(evt) {
-  if (!$('.header__menu-dropdown-inner').is(evt.target) && $('.header__menu-dropdown-inner').has(evt.target).length === 0) {
-    $('.header__menu-dropdown').removeClass('is-open');
-    $('.js-menu-toggler').removeClass('is-active');
-    $('.js-menu-toggler').find('svg use').attr('xlink:href', '#menu');
-    document.removeEventListener('click', closeMainMenu);
-    enableBodyScroll(menuDropdown);
-    /*$('#menu-open').remove();
-    $('body').removeClass('compensate-for-scrollbar');*/
-	}
-}
 
 //сабменю
 $(document).on('click', '.main-menu__toggler', function () {

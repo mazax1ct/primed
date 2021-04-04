@@ -1,0 +1,269 @@
+.packages-list
+  @media(min-width: 1024px)
+    display: flex
+    justify-content: space-between
+    margin-left: -5px
+    margin-right: -5px
+
+  &__item
+    @media(min-width: 1024px)
+      padding-left: 5px
+      padding-right: 5px
+
+    &:not(:last-child)
+      margin-bottom: 30px
+
+    &:nth-last-child(1),
+    &:nth-last-child(2),
+    &:nth-last-child(3)
+      @media(min-width: 1024px)
+        margin-bottom: 0
+
+.package
+  border: 1px solid rgba($primary-color, 0.2)
+  line-height: 1.3
+  padding: 30px 20px
+
+  @media(min-width: 768px)
+    padding: 40px
+
+  @media(min-width: 1024px)
+    max-width: 400px
+    padding: 30px 20px
+
+  @media(min-width: 1350px)
+    padding: 40px
+
+  &__title
+    color: $primary-color
+    font-weight: 700
+    font-size: 22px
+    margin-bottom: 10px
+
+    @media(min-width: 768px)
+      font-size: 24px
+
+    @media(min-width: 1024px)
+      font-size: 22px
+
+    @media(min-width: 1350px)
+      font-size: 24px
+
+  &__produce
+    color: $text-color
+    font-size: 12px
+    margin-bottom: 30px
+
+    @media(min-width: 768px)
+      font-size: 14px
+
+  &__details
+    margin-bottom: 30px
+
+  &__details-cut
+    display: none
+
+  &__details-toggler-block
+    background-color: #F7FAFF
+    padding: 5px 10px
+
+    @media(min-width: 768px)
+      padding: 10px 20px
+
+  &__details-toggler
+    background-color: transparent
+    border: none
+    color: $primary-color
+    cursor: pointer
+    font-size: 12px
+    font-weight: 500
+    padding-top: 15px
+    padding-bottom: 15px
+    padding-left: 0
+    padding-right: 0
+
+    &:hover
+      span
+        border-color: transparent
+
+    span
+      border-bottom: 1px dotted $primary-color
+      transition: border-color 0.3s
+
+  &__price-title
+    color: $text-color
+    font-weight: 700
+    line-height: 1.3
+    margin-bottom: 15px
+
+    @media(min-width: 768px)
+      margin-bottom: 30px
+
+  &__bottom
+    align-items: flex-end
+    display: flex
+    flex-wrap: wrap
+    margin-left: -10px
+    margin-right: -10px
+
+    @media(min-width: 768px)
+      justify-content: space-between
+
+  &__price-block
+    padding-left: 10px
+    padding-right: 10px
+    margin-bottom: 20px
+    width: 50%
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      width: 33.33333%
+
+    @media(min-width: 1024px)
+      margin-bottom: 20px
+      width: auto
+
+    @media(min-width: 1350px)
+      margin-bottom: 30px
+
+  &__old-price
+    color: rgba($text-color, 0.6)
+    font-size: 12px
+    margin-bottom: 5px
+    text-decoration: line-through
+    white-space: nowrap
+
+    @media(min-width: 768px)
+      font-size: 14px
+
+  &__new-price
+    color: $primary-color
+    font-size: 24px
+    font-weight: 500
+    line-height: 1
+    white-space: nowrap
+
+    @media(min-width: 768px)
+      font-size: 30px
+
+    @media(min-width: 1024px)
+      font-size: 20px
+
+    @media(min-width: 1350px)
+      font-size: 30px
+
+  &__credit
+    color: $text-color
+    margin-bottom: 20px
+    position: relative
+    padding-left: 45px
+    padding-right: 10px
+    width: 50%
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      padding-left: 50px
+      width: 33.33333%
+
+    @media(min-width: 1024px)
+      margin-bottom: 20px
+      width: auto
+
+    @media(min-width: 1350px)
+      margin-bottom: 30px
+
+    &::before
+      align-items: center
+      border-radius: 4px
+      background-color: $secondary-color
+      color: #fff
+      content: '%'
+      display: flex
+      font-size: 12px
+      font-weight: 700
+      height: 30px
+      justify-content: center
+      left: 0
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 30px
+
+      @media(min-width: 768px)
+        font-size: 14px
+        height: 34px
+        width: 34px
+
+  &__credit-value
+    display: block
+    font-size: 12px
+    font-weight: 700
+    margin-bottom: 5px
+
+    @media(min-width: 768px)
+      font-size: 14px
+
+  &__credit-note
+    display: block
+    font-size: 8px
+
+    @media(min-width: 768px)
+      font-size: 10px
+
+  &__action-time
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0C3.58888 0 0 3.58888 0 8C0 12.4111 3.58888 16 8 16C12.4111 16 16 12.4111 16 8C16 3.58888 12.4111 0 8 0ZM8 15C4.14013 15 1 11.8599 1 8C1 4.14013 4.14013 1 8 1C11.8599 1 15 4.14013 15 8C15 11.8599 11.8599 15 8 15Z' fill='%232164B4'/%3E%3Cpath d='M8.5 3H7.5V8.20702L10.6465 11.3535L11.3535 10.6465L8.5 7.79295V3Z' fill='%232164B4'/%3E%3C/svg%3E%0A")
+    background-position: 10px 50%
+    background-repeat: no-repeat
+    color: $primary-color
+    display: block
+    font-size: 14px
+    font-weight: 400
+    padding-right: 10px
+    padding-left: 45px
+
+    @media(min-width: 768px)
+      background-size: 20px 20px
+      width: 33.33333%
+
+    @media(min-width: 1024px)
+      font-size: 12px
+      line-height: 20px
+      width: 100%
+
+    @media(min-width: 1350px)
+      font-size: 15px
+
+.package-detail
+  align-items: center
+  background-color: #F7FAFF
+  border-bottom: 1px dashed rgba($text-color, 0.1)
+  color: $text-color
+  display: flex
+  justify-content: space-between
+  margin-bottom: 0
+  padding: 10px
+
+  @media(min-width: 768px)
+    padding: 12px 20px
+
+  @media(min-width: 1024px)
+    padding: 10px
+
+  &--marked
+    background-color: #fff
+
+  &__title
+    font-size: 12px
+    padding-right: 15px
+
+    @media(min-width: 768px)
+      font-size: 14px
+
+  &__price
+    font-weight: 500
+    min-width: 65px
+    white-space: nowrap
+
+    @media(min-width: 768px)
+      font-size: 18px
+      min-width: 85px

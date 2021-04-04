@@ -1,0 +1,74 @@
+.video
+  &__link,
+  &__picture,
+  &__image
+    display: block
+    width: 100%
+
+  &__picture
+    overflow: hidden
+
+  &__link
+    position: relative
+    margin-bottom: 30px
+
+    @media(min-width: 768px)
+      margin-bottom: 60px
+
+    @media(min-width: 1350px)
+      margin-bottom: 80px
+
+    img
+      transition: transform 0.3s
+      transform: scale(1)
+
+    &:hover
+      img
+        transform: scale(1.02)
+
+      &::after
+        background-color: $primary-color
+        transform: translate(-50%, -50%) scale(1.1)
+
+        @media(min-width: 768px)
+          transform: translateY(-50%) scale(1.1)
+
+    &::after
+      background-color: $secondary-color
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.0019 6.92853L2.83338 1.33638C2.45614 1.07794 2.07605 0.941162 1.76011 0.941162C1.14932 0.941162 0.771484 1.43137 0.771484 2.25191V14.3382C0.771484 15.1578 1.14884 15.647 1.75821 15.647C2.07462 15.647 2.44864 15.5101 2.82671 15.251L10.9991 9.65896C11.5246 9.29874 11.8157 8.81401 11.8157 8.29345C11.8158 7.77324 11.5281 7.28863 11.0019 6.92853Z' fill='white'/%3E%3C/svg%3E")
+      background-position: 50% 50%
+      background-repeat: no-repeat
+      border-radius: 50%
+      content: ''
+      height: 80px
+      left: 50%
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%) scale(1)
+      transition: transform 0.3s, background-color 0.3s
+      width: 80px
+      z-index: 1
+
+      @media(min-width: 768px)
+        left: 55px
+        top: 100%
+        transform: translateY(-50%) scale(1)
+
+      @media(min-width: 1350px)
+        height: 100px
+        left: 115px
+        width: 100px
+
+  &__duration
+    color: $text-color
+    font-size: 12px
+    font-weight: 500
+    text-align: center
+
+    @media(min-width: 768px)
+      padding-left: 55px
+      text-align: left
+
+    @media(min-width: 1350px)
+      font-size: 16px
+      padding-left: 105px

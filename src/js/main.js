@@ -28,3 +28,8 @@ $(document).ready(function() {
 		$p.removeClass('open');
 	});
 });
+
+$(document).on('click', '.tooltip-container__button', function () {
+	$(this).parent().find('.tooltip').toggleClass('is-open');
+	return false;
+});

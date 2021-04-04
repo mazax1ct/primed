@@ -1,0 +1,186 @@
+.actions
+  .container
+    position: relative
+
+  &__title
+    @media(min-width: 1350px)
+      font-size: 65px
+      line-height: 1.2
+      margin-bottom: 100px
+
+  &__link
+    @media(min-width: 768px)
+      left: auto
+      position: absolute
+      right: 40px
+      top: 0
+      z-index: 1
+
+.actions-slider
+  margin-bottom: 70px
+
+  @media(min-width: 768px)
+    margin-bottom: 30px
+
+  @media(min-width: 1350px)
+    margin-bottom: 40px
+
+  .slick-slide
+    & > *
+      display: block
+
+  .slick-arrow
+    align-items: center
+    border-radius: 50%
+    border: 1px solid rgba($secondary-color, 0.4)
+    background-color: transparent
+    cursor: pointer
+    display: flex
+    height: 60px
+    justify-content: center
+    padding: 0
+    position: absolute
+    top: 100%
+    transform: translateY(-50%)
+    transition: background-color 0.3s, border-color 0.3s, opacity 0.3s
+    width: 60px
+    z-index: 1
+
+    @media(min-width: 1350px)
+      height: 80px
+      width: 80px
+
+    &.slick-disabled
+      cursor: default
+      opacity: 0.5
+
+    &:not(.slick-disabled)
+
+      &:hover
+        background-color: $primary-color
+        border-color: $primary-color
+
+        .slick-arrow__arrow
+          fill: #fff
+
+  .slick-arrow__arrow
+    fill: $secondary-color
+    height: 12px
+    transition: fill 0.3s
+    width: 12px
+
+    @media(min-width: 1350px)
+      height: 16px
+      width: 16px
+
+  .slick-prev
+    left: 15px
+
+    @media(min-width: 1350px)
+      left: 60px
+
+  .slick-next
+    left: 100px
+
+    @media(min-width: 1350px)
+      left: 170px
+
+.action
+  background-color: #F4F8FF
+  display: flex
+  flex-direction: column
+  min-height: 480px
+  overflow: hidden
+  position: relative
+
+  @media(min-width: 768px)
+    min-height: 395px
+
+  @media(min-width: 1350px)
+    min-height: 600px
+
+  &:hover
+    img
+      transform: scale(1.02)
+
+  &__picture
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+
+    img
+      display: block
+      flex-grow: 1
+      height: 100%
+      max-height: 600px
+      object-fit: cover
+      transition: transform 0.3s
+      transform: scale(1)
+      width: 100%
+
+  &__container
+    left: 0
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: 30px
+    padding-bottom: 30px
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 1
+
+    @media (min-width: 768px)
+      padding-top: 40px
+      padding-bottom: 40px
+      padding-left: 30px
+      padding-right: 40%
+
+    @media (min-width: 1024px)
+      padding-left: 60px
+      top: 50%
+      transform: translateY(-50%)
+
+    @media (min-width: 1350px)
+      padding-right: 50%
+
+  &__title
+    color: $text-color
+    display: block
+    font-size: 20px
+    line-height: 1.2
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      font-size: 32px
+      margin-bottom: 30px
+
+    @media (min-width: 1350px)
+      font-size: 50px
+      margin-bottom: 40px
+
+  &__text
+    color: $text-color
+    display: block
+    margin-bottom: 30px
+
+    @media(min-width: 768px)
+      margin-bottom: 60px
+
+    @media (min-width: 1350px)
+      font-size: 18px
+
+  &__time
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0C3.58888 0 0 3.58888 0 8C0 12.4111 3.58888 16 8 16C12.4111 16 16 12.4111 16 8C16 3.58888 12.4111 0 8 0ZM8 15C4.14013 15 1 11.8599 1 8C1 4.14013 4.14013 1 8 1C11.8599 1 15 4.14013 15 8C15 11.8599 11.8599 15 8 15Z' fill='%232164B4'/%3E%3Cpath d='M8.5 3H7.5V8.20702L10.6465 11.3535L11.3535 10.6465L8.5 7.79295V3Z' fill='%232164B4'/%3E%3C/svg%3E%0A")
+    background-position: 0 50%
+    background-repeat: no-repeat
+    display: block
+    font-size: 12px
+    font-weight: 400
+    line-height: 16px
+    padding-left: 30px
+
+    @media(min-width: 1350px)
+      background-size: 20px 20px
+      font-size: 16px
+      line-height: 20px
+      padding-left: 40px

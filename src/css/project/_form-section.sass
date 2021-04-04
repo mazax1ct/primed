@@ -1,0 +1,66 @@
+.form-section
+  background-image: url('../images/backgrounds/form_mobile.svg')
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-color: $secondary-color
+  color: rgba(#fff, 0.8)
+  padding-top: 60px
+  padding-bottom: 60px
+
+  @media(min-width: 768px)
+    background-image: url('../images/backgrounds/form_tablet.svg')
+    padding-top: 80px
+    padding-bottom: 80px
+
+  @media(min-width: 1350px)
+    background-image: url('../images/backgrounds/form_desktop.svg')
+    padding-top: 120px
+    padding-bottom: 120px
+
+  &__title
+    color: #fff
+
+    @media(min-width: 1350px)
+      font-size: 65px
+      line-height: 1.2
+      margin-bottom: 60px
+
+  &__text
+    max-width: 510px
+
+    @media(min-width: 1350px)
+      font-size: 22px
+      max-width: 650px
+
+  &__form-note
+    color: #fff
+    font-size: 12px
+    max-width: 510px
+
+    @media(min-width: 768px)
+      font-size: 14px
+
+    @media(min-width: 1350px)
+      font-size: 16px
+      max-width: 650px
+
+  &__layout
+    @media(min-width: 1350px)
+      display: flex
+      margin-left: -36px
+      margin-right: -36px
+
+  &__layout-block
+    &:not(:last-child)
+      margin-bottom: 40px
+
+      @media(min-width: 768px)
+        margin-bottom: 80px
+
+      @media(min-width: 1350px)
+        margin-bottom: 0
+
+    @media(min-width: 1350px)
+      padding-left: 36px
+      padding-right: 36px
+      width: 50%
