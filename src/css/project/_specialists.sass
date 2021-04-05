@@ -1,5 +1,170 @@
 .specialists
+  &__title-block
+    align-items: center
+    display: flex
+    margin-bottom: 40px
+    margin-left: -15px
+    margin-right: -15px
+
+    @media(min-width: 768px)
+      margin-bottom: 60px
+
+    @media(min-width: 1350px)
+      margin-bottom: 100px
+
   &__title
+    font-size: 24px
+    margin-bottom: 0
+    padding-left: 15px
+    padding-right: 15px
+    width: 50%
+
+    @media(min-width: 768px)
+      font-size: 36px
+
     @media(min-width: 1350px)
       font-size: 65px
       line-height: 1.2
+
+  &__arrows
+    align-items: center
+    display: flex
+    padding-left: 15px
+    padding-right: 15px
+    width: 50%
+
+    .slick-arrow
+      align-items: center
+      border-radius: 50%
+      border: 1px solid rgba($secondary-color, 0.4)
+      background-color: transparent
+      cursor: pointer
+      display: flex
+      height: 60px
+      justify-content: center
+      padding: 0
+      top: 100%
+      transition: background-color 0.3s, border-color 0.3s, opacity 0.3s
+      width: 60px
+      z-index: 1
+
+      &:not(:last-child)
+        margin-right: 20px
+
+        @media(min-width: 1350px)
+          margin-right: 30px
+
+      @media(min-width: 1350px)
+        height: 80px
+        width: 80px
+
+      &.slick-disabled
+        cursor: default
+        opacity: 0.5
+
+      &:not(.slick-disabled)
+
+        &:hover
+          background-color: $primary-color
+          border-color: $primary-color
+
+          .slick-arrow__arrow
+            fill: #fff
+
+    .slick-arrow__arrow
+      fill: $secondary-color
+      height: 12px
+      transition: fill 0.3s
+      width: 12px
+
+      @media(min-width: 1350px)
+        height: 16px
+        width: 16px
+
+.specialist
+  @media(min-width: 768px)
+    align-items: center
+    display: flex
+    margin-left: -15px
+    margin-right: -15px
+
+  @media(min-width: 1350px)
+    margin-left: -40px
+    margin-right: -40px
+
+  &__left,
+  &__right
+    @media(min-width: 768px)
+      padding-left: 15px
+      padding-right: 15px
+      width: 50%
+
+    @media(min-width: 1350px)
+      padding-left: 40px
+      padding-right: 40px
+
+  &__left
+    margin-bottom: 40px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+    .specialist__name,
+    .specialist__spec-exp
+      @media(min-width: 768px)
+        display: none
+
+  &__right
+    .specialist__name,
+    .specialist__spec-exp
+      display: none
+
+    .specialist__name
+      @media(min-width: 768px)
+        display: block
+
+    .specialist__spec-exp
+      @media(min-width: 768px)
+        display: flex
+
+  &__name
+    color: $text-color
+    font-size: 22px
+    font-weight: 500
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      font-size: 24px
+
+    @media(min-width: 1350px)
+      font-size: 42px
+      margin-bottom: 40px
+
+  &__spec-exp
+    align-items: center
+    display: flex
+    font-weight: 500
+    color: $secondary-color
+    margin-bottom: 40px
+
+    @media(min-width: 1350px)
+      font-size: 22px
+      margin-bottom: 80px
+
+    span
+      &:not(:last-child)
+        margin-right: 40px
+
+  &__image
+    max-width: 507px
+
+  &__about
+    font-size: 12px
+    margin-bottom: 40px
+
+    @media(min-width: 1350px)
+      font-size: 16px
+      margin-bottom: 80px
+
+  &__avatar
+    max-width: 507px

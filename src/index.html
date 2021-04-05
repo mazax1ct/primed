@@ -62,7 +62,7 @@
             <picture class="video__picture">
               <source srcset="images/content/video/desktop.jpg, images/content/video/desktop@2x.jpg 2x" media="(min-width: 1024px)">
               <source srcset="images/content/video/tablet.jpg, images/content/video/tablet@2x.jpg 2x" media="(min-width: 768px)">
-              <img class="video__image" src="images/content/video/mobile.jpg" srcset="images/content/video/mobile@2x.jpg 2x" alt="alt">
+              <img class="video__image" src="images/content/video/mobile.jpg" srcset="images/content/video/mobile@2x.jpg 2x" alt="alt" loading="lazy">
             </picture>
           </a>
           <p class="video__duration">Как это работает <span class="primary-color">4 мин</span></p>
@@ -161,7 +161,7 @@
                 <p class="system__price">От 80 500 рублей</p>
                 <p class="system__price-note">* Точную цену уточняйте в клинике</p>
               </div>
-              <button class="button" type="button" data-fancybox="consult_2" data-src="#consult">Бесплатная консультация <svg class="arrow"><use xlink:href="#arrow_right"></use></svg></button>
+              <button class="button" type="button" data-fancybox="consult_3" data-src="#consult">Бесплатная консультация <svg class="arrow"><use xlink:href="#arrow_right"></use></svg></button>
             </div>
             <div class="system__features">
               <div class="system__features-item">
@@ -187,13 +187,13 @@
           <div class="system__column">
             <div class="js-system-slider system-slider">
               <div class="system-slider__slide">
-                <img src="images/content/system/img_1.jpg" alt="alt">
+                <img src="images/content/system/img_1.jpg" alt="alt" loading="lazy">
               </div>
               <div class="system-slider__slide">
-                <img src="images/content/system/img_1.jpg" alt="alt">
+                <img src="images/content/system/img_1.jpg" alt="alt" loading="lazy">
               </div>
               <div class="system-slider__slide">
-                <img src="images/content/system/img_1.jpg" alt="alt">
+                <img src="images/content/system/img_1.jpg" alt="alt" loading="lazy">
               </div>
             </div>
           </div>
@@ -241,7 +241,7 @@
               <picture class="action__picture">
                 <source srcset="images/content/actions/desktop.jpg, images/content/actions/desktop@2x.jpg 2x" media="(min-width: 1024px)">
                 <source srcset="images/content/actions/tablet.jpg, images/content/actions/tablet@2x.jpg 2x" media="(min-width: 768px)">
-                <img src="images/content/actions/mobile.jpg" srcset="images/content/actions/mobile@2x.jpg 2x" alt="alt">
+                <img src="images/content/actions/mobile.jpg" srcset="images/content/actions/mobile@2x.jpg 2x" alt="alt" loading="lazy">
               </picture>
               <span class="action__container">
                 <span class="action__title">Первичная консультация терапевта и хирурга бесплатно</span>
@@ -255,7 +255,7 @@
               <picture class="action__picture">
                 <source srcset="images/content/actions/desktop.jpg, images/content/actions/desktop@2x.jpg 2x" media="(min-width: 1024px)">
                 <source srcset="images/content/actions/tablet.jpg, images/content/actions/tablet@2x.jpg 2x" media="(min-width: 768px)">
-                <img src="images/content/actions/mobile.jpg" srcset="images/content/actions/mobile@2x.jpg 2x" alt="alt">
+                <img src="images/content/actions/mobile.jpg" srcset="images/content/actions/mobile@2x.jpg 2x" alt="alt" loading="lazy">
               </picture>
               <span class="action__container">
                 <span class="action__title">Первичная консультация терапевта и хирурга бесплатно</span>
@@ -277,32 +277,126 @@
             <p class="service-item__title">Полный курс Full/Teen без ограничения количества капп на системе Invisalign</p>
             <div class="service-item__price-block">
               <p class="service-item__old-price">от 195 000 ₽</p>
-              <p class="service-item__new-price">от 136 500 ₽ <span class="tooltip-container"><button class="tooltip-container__button" type="button">i</button> <span class="tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></span></p>
+              <p class="service-item__new-price">от 136 500 ₽ <span class="tooltip-container"><button class="tooltip-container__button" type="button" title="Подсказка">i</button> <span class="tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></span></p>
             </div>
           </div>
           <div class="service-item">
             <p class="service-item__title">Курс на системе Invisalign Lite (до 14 капп)</p>
             <div class="service-item__price-block">
               <p class="service-item__old-price">от 150 000 ₽</p>
-              <p class="service-item__new-price">от 105 500 ₽ <span class="tooltip-container"><button class="tooltip-container__button" type="button">i</button> <span class="tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></span></p>
+              <p class="service-item__new-price">от 105 500 ₽ <span class="tooltip-container"><button class="tooltip-container__button" type="button" title="Подсказка">i</button> <span class="tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></span></p>
             </div>
           </div>
           <div class="service-item">
             <p class="service-item__title">Курс на системе Invisalign Express (до 7 капп)</p>
             <div class="service-item__price-block">
               <p class="service-item__old-price">от 115 000 ₽</p>
-              <p class="service-item__new-price">от 80 500 ₽ <span class="tooltip-container"><button class="tooltip-container__button" type="button">i</button> <span class="tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></span></p>
+              <p class="service-item__new-price">от 80 500 ₽ <span class="tooltip-container"><button class="tooltip-container__button" type="button" title="Подсказка">i</button> <span class="tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></span></p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="page-section examples">
+      <div class="js-examples-slider examples-slider">
+        <div class="examples-slider__slide">
+          <div class="example" style="background-image: url('images/content/examples/img_4.jpg')">
+            <div class="container">
+              <div class="example__inner">
+                <div class="example__left">
+                  <p class="example__title">Реальные результаты</p>
+                  <p class="example__quote">“ Я построила новую жизнь,<br> благодаря элайнерам ”</p>
+                  <p class="example__patient"><span class="example__patient-avatar"><img src="images/content/examples/img_1.jpg" alt="alt"></span> Катерина Иванова, 35 лет</p>
+                  <p class="example__diagnosis">Взрослый пациент: Класс II, серьёзный<br> глубокий прикус и смещение средней линии</p>
+                  <p class="example__result-title">Результат:</p>
+                  <ul class="example__results">
+                    <li>Глубокий прикус скорректирован</li>
+                    <li>Класс II подкласс 2 скорректирован до класса I</li>
+                    <li>Клинический случай с удалениями</li>
+                  </ul>
+                </div>
+                <div class="example__right">
+                  <div class="example__before-after">
+                    <div class="example__before"><img src="images/content/examples/img_2.jpg" alt="alt" loading="lazy"></div>
+                    <div class="example__after"><img src="images/content/examples/img_3.jpg" alt="alt" loading="lazy"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="examples-slider__slide">
+          <div class="example" style="background-image: url('images/content/examples/img_4.jpg')">
+            <div class="container">
+              <div class="example__inner">
+                <div class="example__left">
+                  <p class="example__title">Реальные результаты</p>
+                  <p class="example__quote">“ Я построила новую жизнь,<br> благодаря элайнерам ”</p>
+                  <p class="example__patient"><span class="example__patient-avatar"><img src="images/content/examples/img_1.jpg" alt="alt"></span> Катерина Иванова, 35 лет</p>
+                  <p class="example__diagnosis">Взрослый пациент: Класс II, серьёзный<br> глубокий прикус и смещение средней линии</p>
+                  <p class="example__result-title">Результат:</p>
+                  <ul class="example__results">
+                    <li>Глубокий прикус скорректирован</li>
+                    <li>Класс II подкласс 2 скорректирован до класса I</li>
+                    <li>Клинический случай с удалениями</li>
+                  </ul>
+                </div>
+                <div class="example__right">
+                  <div class="example__before-after">
+                    <div class="example__before"><img src="images/content/examples/img_2.jpg" alt="alt" loading="lazy"></div>
+                    <div class="example__after"><img src="images/content/examples/img_3.jpg" alt="alt" loading="lazy"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="examples__arrows"></div>
+    </section>
+
     <section class="page-section specialists">
       <div class="container">
-        <div class="page-section__title-block">
-          <h2 class="page-section__title specialists__title">Ведущие специалисты</h2>
-          <div class="page-section__text "></div>
+        <div class="page-section__title-block specialists__title-block">
+          <h2 class="page-section__title specialists__title">Ведущие<br> специалисты</h2>
+          <div class="page-section__text specialists__arrows"></div>
+        </div>
+        <div class="js-specialists-slider specialists-slider">
+          <div class="specialists-slider__slider">
+            <div class="specialist">
+              <div class="specialist__left">
+                <p class="specialist__name">Максим Юрьевич Кроливец</p>
+                <p class="specialist__spec-exp"><span>Стоматолог ортодонт</span> <span>Стаж более 11 лет</span></p>
+                <div class="specialist__image"><img src="images/content/specialists/img_1.jpg" alt="alt" loading="lazy"></div>
+              </div>
+              <div class="specialist__right">
+                <p class="specialist__name">Максим Юрьевич Кроливец</p>
+                <p class="specialist__spec-exp"><span>Стоматолог ортодонт</span> <span>Стаж более 11 лет</span></p>
+                <div class="specialist__about">
+                  <p>Считает, что лечение пациента должно быть комплексным. Владеет современными методами обследования и диагностики пациентов с зубочелюстными аномалиями и деформациями. В работе использует различных виды брекет-систем и съемных ортодонтических аппаратов. Подготавливает пациентов с челюстно-лицевыми аномалиями к комбинированному ортодонто - хирургическому лечению.</p>
+                </div>
+                <p><button class="button" type="button" data-fancybox="appointment_4" data-src="#appointment">Записаться на прием <svg class="arrow"><use xlink:href="#arrow_right"></use></svg></button></p>
+              </div>
+            </div>
+          </div>
+          <div class="specialists-slider__slider">
+            <div class="specialist">
+              <div class="specialist__left">
+                <p class="specialist__name">Максим Юрьевич Кроливец</p>
+                <p class="specialist__spec-exp"><span>Стоматолог ортодонт</span> <span>Стаж более 11 лет</span></p>
+                <div class="specialist__image"><img src="images/content/specialists/img_1.jpg" alt="alt" loading="lazy"></div>
+              </div>
+              <div class="specialist__right">
+                <p class="specialist__name">Максим Юрьевич Кроливец</p>
+                <p class="specialist__spec-exp"><span>Стоматолог ортодонт</span> <span>Стаж более 11 лет</span></p>
+                <div class="specialist__about">
+                  <p>Считает, что лечение пациента должно быть комплексным. Владеет современными методами обследования и диагностики пациентов с зубочелюстными аномалиями и деформациями. В работе использует различных виды брекет-систем и съемных ортодонтических аппаратов. Подготавливает пациентов с челюстно-лицевыми аномалиями к комбинированному ортодонто - хирургическому лечению.</p>
+                </div>
+                <p><button class="button" type="button" data-fancybox="appointment_5" data-src="#appointment">Записаться на прием <svg class="arrow"><use xlink:href="#arrow_right"></use></svg></button></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -602,12 +696,12 @@
           <div class="about__column"><p>Мы даем гарантии на свои услуги и прописываем их в договоре. Вы можете быть уверены в высоком качестве всех проводимых в клинике процедур!</p></div>
         </div>
         <div class="js-about-slider about-slider">
-          <div class="about-slider__slide"><a href="images/content/about/img_1.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_1.jpg" alt="alt"></a></div>
-          <div class="about-slider__slide"><a href="images/content/about/img_2.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_2.jpg" alt="alt"></a></div>
-          <div class="about-slider__slide"><a href="images/content/about/img_3.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_3.jpg" alt="alt"></a></div>
-          <div class="about-slider__slide"><a href="images/content/about/img_1.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_1.jpg" alt="alt"></a></div>
-          <div class="about-slider__slide"><a href="images/content/about/img_2.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_2.jpg" alt="alt"></a></div>
-          <div class="about-slider__slide"><a href="images/content/about/img_3.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_3.jpg" alt="alt"></a></div>
+          <div class="about-slider__slide"><a href="images/content/about/img_1.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_1.jpg" alt="alt" loading="lazy"></a></div>
+          <div class="about-slider__slide"><a href="images/content/about/img_2.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_2.jpg" alt="alt" loading="lazy"></a></div>
+          <div class="about-slider__slide"><a href="images/content/about/img_3.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_3.jpg" alt="alt" loading="lazy"></a></div>
+          <div class="about-slider__slide"><a href="images/content/about/img_1.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_1.jpg" alt="alt" loading="lazy"></a></div>
+          <div class="about-slider__slide"><a href="images/content/about/img_2.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_2.jpg" alt="alt" loading="lazy"></a></div>
+          <div class="about-slider__slide"><a href="images/content/about/img_3.jpg" data-fancybox="about_gallery"><img src="images/content/about/img_3.jpg" alt="alt" loading="lazy"></a></div>
         </div>
         <div class="features">
           <div class="features__item">
@@ -740,11 +834,11 @@
               <div class="our-clinic__left">
                 <p class="our-clinic__title">Стоматологический Центр Невский 130</p>
                 <div class="our-clinic__images">
-                  <div class="our-clinic__image"><a href="images/content/clinics/img_1.jpg" data-fancybox="gallery_1"><img src="images/content/clinics/img_1.jpg" alt="alt"></a></div>
+                  <div class="our-clinic__image"><a href="images/content/clinics/img_1.jpg" data-fancybox="gallery_1"><img src="images/content/clinics/img_1.jpg" alt="alt" loading="lazy"></a></div>
                   <div class="our-clinic__thumbs">
-                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_2.jpg" data-fancybox="gallery_1"><img src="images/content/clinics/img_2.jpg" alt="alt"></a></div>
-                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_3.jpg" data-fancybox="gallery_1"><img src="images/content/clinics/img_3.jpg" alt="alt"></a></div>
-                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_4.jpg" data-fancybox="gallery_1"><img src="images/content/clinics/img_4.jpg" alt="alt"></a></div>
+                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_2.jpg" data-fancybox="gallery_1"><img src="images/content/clinics/img_2.jpg" alt="alt" loading="lazy"></a></div>
+                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_3.jpg" data-fancybox="gallery_1"><img src="images/content/clinics/img_3.jpg" alt="alt" loading="lazy"></a></div>
+                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_4.jpg" data-fancybox="gallery_1"><img src="images/content/clinics/img_4.jpg" alt="alt" loading="lazy"></a></div>
                   </div>
                 </div>
               </div>
@@ -763,11 +857,11 @@
               <div class="our-clinic__left">
                 <p class="our-clinic__title">ул. Куйбышева, д.21</p>
                 <div class="our-clinic__images">
-                  <div class="our-clinic__image"><a href="images/content/clinics/img_1.jpg" data-fancybox="gallery_2"><img src="images/content/clinics/img_1.jpg" alt="alt"></a></div>
+                  <div class="our-clinic__image"><a href="images/content/clinics/img_1.jpg" data-fancybox="gallery_2"><img src="images/content/clinics/img_1.jpg" alt="alt" loading="lazy"></a></div>
                   <div class="our-clinic__thumbs">
-                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_2.jpg" data-fancybox="gallery_2"><img src="images/content/clinics/img_2.jpg" alt="alt"></a></div>
-                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_3.jpg" data-fancybox="gallery_2"><img src="images/content/clinics/img_3.jpg" alt="alt"></a></div>
-                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_4.jpg" data-fancybox="gallery_2"><img src="images/content/clinics/img_4.jpg" alt="alt"></a></div>
+                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_2.jpg" data-fancybox="gallery_2"><img src="images/content/clinics/img_2.jpg" alt="alt" loading="lazy"></a></div>
+                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_3.jpg" data-fancybox="gallery_2"><img src="images/content/clinics/img_3.jpg" alt="alt" loading="lazy"></a></div>
+                    <div class="our-clinic__thumb"><a href="images/content/clinics/img_4.jpg" data-fancybox="gallery_2"><img src="images/content/clinics/img_4.jpg" alt="alt" loading="lazy"></a></div>
                   </div>
                 </div>
               </div>
@@ -851,6 +945,8 @@
   //= template/scripts.html
   <script src="js/system-slider.js"></script>
   <script src="js/actions.js"></script>
+  <script src="js/examples.js"></script>
+  <script src="js/specialists.js"></script>
   <script src="js/packages.js"></script>
   <script src="js/reviews.js"></script>
   <script src="js/about.js"></script>

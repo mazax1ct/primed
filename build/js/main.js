@@ -1,6 +1,6 @@
 //настройки fancybox
 $.fancybox.defaults.autoFocus = false;
-$.fancybox.defaults.touch = false;
+//$.fancybox.defaults.touch = false;
 $.fancybox.defaults.hash = false;
 $.fancybox.defaults.toolbar = false;
 //$.fancybox.defaults.smallBtn = false;
