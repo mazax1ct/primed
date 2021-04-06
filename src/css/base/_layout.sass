@@ -3,10 +3,6 @@ html
   font-family: sans-serif
   height: 100%
 
-  &.open
-    margin-left: calc(100vw - 100%)
-    margin-right: 0
-
 *,
 *::after,
 *::before
@@ -23,37 +19,19 @@ body
 
 .page-content
   flex: 1 0 auto
-  //padding-top: 125px
-  padding-bottom: 50px
-
-  //@media (min-width: 768px)
-    padding-top: 165px
-
-  //@media (min-width: 1350px)
-    padding-top: 180px
 
 .page-section
-  &:not(:last-child)
-    margin-bottom: 80px
+  margin-bottom: 80px
 
-    @media (min-width: 768px)
-      margin-bottom: 120px
+  @media (min-width: 768px)
+    margin-bottom: 120px
 
-    @media (min-width: 1350px)
-      margin-bottom: 160px
+  @media (min-width: 1350px)
+    margin-bottom: 160px
 
-  &--waves
-    @media(min-width: 768px)
-      background: url('../images/backgrounds/waves_tablet.svg') no-repeat 40% 0 / cover transparent
-
-    @media(min-width: 1024px)
-      background-position: 40% 100%
-
-    @media(min-width: 1350px)
-      background: url('../images/backgrounds/waves_desktop.svg') no-repeat 40% 0 / cover transparent
-
-  &--waves_bottom
-    background-position: 40% 100%
+  &.form-section
+    &:last-child
+      margin-bottom: 0
 
   &__title-block
     margin-bottom: 60px
@@ -94,6 +72,13 @@ body
       font-size: 20px
       padding-left: 40px
       padding-right: 40px
+
+.waves
+  @media(min-width: 768px)
+    background: url('../images/backgrounds/waves_tablet.svg') no-repeat 40% 0 transparent
+
+  @media(min-width: 1350px)
+    background: url('../images/backgrounds/waves_desktop.svg') no-repeat 40% 0 / cover transparent
 
 .container
   margin-left: auto

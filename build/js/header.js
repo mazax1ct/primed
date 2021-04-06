@@ -22,9 +22,46 @@ function scrollBarWidth() {
   }
 }
 
+var $nav = $('.nav');
+var $btn = $('.nav button');
+var $vlinks = $('.clinics-menu');
+var $hlinks = $('.dropdown-menu');
+var breaks = [];
+
+function updateNav() {
+  if($('body').width() > 1023) {
+    var availableSpace = $('.header__top .container').width() - $('.header__logo').width() - $('.header__top-right').width() - $('.header__clinics-button').width() - 120;
+    //console.log($('.header__top .container').width(), $('.header__logo').width(), $('.header__top-right').width(), availableSpace);
+    if ($vlinks.width() > availableSpace) {
+      breaks.push($vlinks.width());
+      $vlinks.children('.clinics-menu__item').last().prependTo($hlinks);
+      $('.clinics-menu__button span').text(breaks.length);
+    } else {
+      if (availableSpace > breaks[breaks.length - 1]) {
+        //$hlinks.children().first().appendTo($vlinks);
+        $hlinks.children().first().insertBefore($('.clinics-menu__more'));
+        breaks.pop();
+        $('.clinics-menu__button span').text(breaks.length);
+      }
+      if (breaks.length < 1) {
+        $hlinks.addClass('hidden');
+      }
+    }
+    if ($vlinks.width() > availableSpace) {
+      updateNav();
+    }
+  }
+}
+
 $(document).ready(function() {
   //запуск функции навешивания класса на шапку
   resize_scroll();
+
+  updateNav();
+});
+
+$(window).resize(function() {
+  updateNav();
 });
 
 //перезапуск функции навешивания класса на шапку при скролле и ресайзе

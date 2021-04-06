@@ -25,13 +25,78 @@
       justify-content: space-between
 
   &__logo
+    margin-right: 20px
+    min-width: 31px
     width: 31px
 
+    @media(min-width: 375px)
+      margin-right: 50px
+
     @media(min-width: 768px)
+      min-width: 172px
       width: 172px
 
+    @media(min-width: 1024px)
+      margin-right: 60px
+
     @media(min-width: 1350px)
+      min-width: 230px
       width: 230px
+
+  &__clinics-block
+    @media(min-width: 375px)
+      margin-right: 50px
+
+    @media(min-width: 1024px)
+      align-items: center
+      display: flex
+      flex-grow: 1
+
+  &__clinics-button
+    align-items: flex-start
+    color: $text-color
+    display: flex
+    flex-direction: column
+    font-size: 12px
+    font-weight: 500
+    white-space: nowrap
+
+    @media(min-width: 768px)
+      align-items: center
+      font-size: 14px
+      flex-direction: row
+
+    @media(min-width: 1024px)
+      margin-right: 20px
+
+  &__clinics-toggler
+    align-items: center
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid $primary-color
+    color: $primary-color
+    cursor: pointer
+    display: flex
+    padding: 0
+
+    @media(min-width: 768px)
+      margin-right: 5px
+
+    @media(min-width: 1024px)
+      color: $text-color
+      cursor: text
+      border-bottom: none
+      margin-right: 5px
+      pointer-events: none
+
+    svg
+      fill: $primary-color
+      height: 9px
+      margin-left: 5px
+      width: 9px
+
+      @media(min-width: 1024px)
+        display: none
 
   &__top-right
     align-items: center
@@ -45,6 +110,7 @@
     font-weight: 500
     line-height: 23px
     text-decoration: none
+    white-space: nowrap
 
     @media(min-width: 1350px)
       font-size: 25px
@@ -543,6 +609,59 @@
 
     @media (min-width: 1350px)
       position: static
+
+.clinics-menu
+  background-color: #fff
+  display: none
+  filter: drop-shadow(0 5px 40px #ECF2FF)
+  font-size: 12px
+  list-style: none
+  left: 0
+  margin: 0
+  padding: 20px 15px
+  position: absolute
+  top: 100%
+  white-space: nowrap
+  z-index: 1
+
+  @media(min-width: 1024px)
+    align-items: center
+    background-color: transparent
+    filter: none
+    font-size: 10px
+    display: flex
+    //flex-wrap: wrap
+    position: static
+    padding: 0
+
+  &__item
+    &.d-none
+      display: none
+
+    &:not(:last-child)
+      @media(min-width: 1024px)
+        margin-right: 20px
+
+  &__link
+    color: $text-color
+    display: block
+    padding-top: 10px
+    padding-bottom: 10px
+
+    &:hover
+      color: $primary-color
+
+  &__button
+    background-color: transparent
+    border: none
+    color: $primary-color
+    cursor: pointer
+    font-size: 10px
+    font-weight: 500
+    padding: 10px
+
+.dropdown-menu
+  display: none
 
 .main-nav
   @media (min-width: 1350px)
