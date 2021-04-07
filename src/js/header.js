@@ -22,34 +22,29 @@ function scrollBarWidth() {
   }
 }
 
-var $nav = $('.nav');
-var $btn = $('.nav button');
+//перенос элементов списка клиник под кат в шапке
 var $vlinks = $('.clinics-menu');
 var $hlinks = $('.dropdown-menu');
 var breaks = [];
 
 function updateNav() {
-  if($('body').width() > 1023) {
-    var availableSpace = $('.header__top .container').width() - $('.header__logo').width() - $('.header__top-right').width() - $('.header__clinics-button').width() - 120;
-    //console.log($('.header__top .container').width(), $('.header__logo').width(), $('.header__top-right').width(), availableSpace);
-    if ($vlinks.width() > availableSpace) {
-      breaks.push($vlinks.width());
-      $vlinks.children('.clinics-menu__item').last().prependTo($hlinks);
+  var availableSpace = $('.header__top .container').width() - $('.header__logo').width() - $('.header__top-right').width() - $('.header__clinics-button').width() - 100;
+  if ($vlinks.width() > availableSpace) {
+    breaks.push($vlinks.width());
+    $vlinks.children('.clinics-menu__item').last().prependTo($hlinks);
+    $('.clinics-menu__button span').text(breaks.length);
+  } else {
+    if (availableSpace > breaks[breaks.length - 1]) {
+      $hlinks.children().first().insertBefore($('.clinics-menu__more'));
+      breaks.pop();
       $('.clinics-menu__button span').text(breaks.length);
-    } else {
-      if (availableSpace > breaks[breaks.length - 1]) {
-        //$hlinks.children().first().appendTo($vlinks);
-        $hlinks.children().first().insertBefore($('.clinics-menu__more'));
-        breaks.pop();
-        $('.clinics-menu__button span').text(breaks.length);
-      }
-      if (breaks.length < 1) {
-        $hlinks.addClass('hidden');
-      }
     }
-    if ($vlinks.width() > availableSpace) {
-      updateNav();
+    if (breaks.length < 1) {
+      $hlinks.addClass('hidden');
     }
+  }
+  if ($vlinks.width() > availableSpace) {
+    updateNav();
   }
 }
 
@@ -57,15 +52,39 @@ $(document).ready(function() {
   //запуск функции навешивания класса на шапку
   resize_scroll();
 
-  updateNav();
+  //перенос элементов списка клиник под кат в шапке
+  if($('body').width() > 1023) {
+    updateNav();
+  }
 });
 
+//перенос элементов списка клиник под кат в шапке
 $(window).resize(function() {
-  updateNav();
+  if($('body').width() > 1023) {
+    updateNav();
+  }
 });
 
 //перезапуск функции навешивания класса на шапку при скролле и ресайзе
 $(window).on("scroll", resize_scroll).on("resize", resize_scroll);
+
+//выпадающий список клиник
+$(document).on('click', '.js-clinics-drop', function () {
+  $(this).toggleClass('is-active');
+  $('.clinics-menu').toggleClass('is-open');
+  return false;
+});
+
+$(document).on('click', '.js-clinics-dropdown', function () {
+  $('.dropdown-menu').toggleClass('is-open');
+  return false;
+});
+
+$(window).on("scroll", function () {
+  $('.js-clinics-drop').removeClass('is-active');
+  $('.clinics-menu').removeClass('is-open');
+  $('.dropdown-menu').removeClass('is-open');
+});
 
 //форма поиска
 $(document).on('click', '.js-search-toggler', function () {
