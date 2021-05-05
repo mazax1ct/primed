@@ -144,7 +144,7 @@
   margin-left: -10px
   margin-right: -10px
 
-  @media(min-width: 1024px)
+  @media(min-width: 768px)
     justify-content: space-between
     margin-left: -15px
     margin-right: -15px
@@ -153,17 +153,20 @@
     margin-bottom: 40px
     padding-left: 10px
     padding-right: 10px
-    width: 33.33333%
+    width: 50%
 
-    @media(min-width: 1024px)
+    @media(min-width: 768px)
       margin-bottom: 0
+      max-width: 250px
       padding-left: 15px
       padding-right: 15px
       width: auto
 
+    @media(min-width: 1024px)
+      width: 20%
+
     &:nth-last-child(1),
-    &:nth-last-child(2),
-    &:nth-last-child(3)
+    &:nth-last-child(2)
       margin-bottom: 0
 
 .feature
